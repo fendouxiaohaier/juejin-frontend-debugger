@@ -7,7 +7,13 @@ class App extends Component {
   
 
   render() {
-
+    console.log('');
+    console.log('test', test);
+    console.log('', );
+    console.log('', );
+    console.log(':', );
+    console.log('test:', test);
+    
     console.log(json);
     console.log(logo);
 
