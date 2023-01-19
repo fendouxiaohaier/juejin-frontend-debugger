@@ -1,9 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
+import json from "./testJsonc.json";
 
 class App extends Component {
+  
+
   render() {
+
+    console.log(json);
+    console.log(logo);
+
     return (
       <div className="App">
         <header className="App-header">
