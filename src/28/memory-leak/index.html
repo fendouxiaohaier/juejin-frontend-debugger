@@ -1,25 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-  <button id="btn">按钮1</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">按钮1</button>
+    <div id="box"></div>
 
-  <script>
-    const btn = document.querySelector('#btn');
+    <script>
+      // 测试.console.log是否占用内存
+      // const btn = document.querySelector('#btn');
 
-    console.log('btn:', btn);
+      // console.log('btn:', btn);
 
-    btn.addEventListener('click', () => {
-      const arr = new Array(1000000);
+      // btn.addEventListener('click', () => {
+      //   const arr = new Array(1000000);
 
-      // console.log(arr);
-    });
-  </script>
-</body>
+      //   // 去到后内存释放
+      //   // console.log(arr);
+      // });
+      // 测试.console.log是否占用内存
+    </script>
+    <script>
+      // 测试不打开控制台的情况，内存暂用情况
+      const btn1 = document.getElementById('btn');
+      const box = document.getElementById('box');
+
+      btn1.addEventListener('click', function () {
+        const MB = 1024 * 1024;
+        log();
+
+        function log() {
+          // 获取内存，打印在页面上
+          const memory = performance.memory.totalJSHeapSize;
+          const usagedMemory = Math.floor(memory / MB);
+          box.insertAdjacentHTML('beforeend', `<span>${usagedMemory} </span>`);
+
+          // console出的是对象
+          const obj = { b: 'b', usagedMemory, str: 'c'.repeat(5 * MB) };
+
+          // 假设console出的是字符串
+          // const obj = 'g'.repeat(5 * MB);
+          console.log(obj);
+
+          setTimeout(() => log(), 50);
+        }
+      });
+    </script>
+  </body>
 </html>
