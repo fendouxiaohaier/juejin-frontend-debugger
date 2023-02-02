@@ -40,13 +40,16 @@
           box.insertAdjacentHTML('beforeend', `<span>${usagedMemory} </span>`);
 
           // console出的是对象
-          const obj = { b: 'b', usagedMemory, str: 'c'.repeat(5 * MB) };
+          // const obj = { b: 'b', usagedMemory, str: 'c'.repeat(5 * MB) };
 
           // 假设console出的是字符串
           // const obj = 'g'.repeat(5 * MB);
+
+          // 假设new 一个String 试试
+          const obj = new String('g'.repeat(5 * MB));
           console.log(obj);
 
-          setTimeout(() => log(), 50);
+          setTimeout(() => log(), 500);
         }
       });
     </script>
