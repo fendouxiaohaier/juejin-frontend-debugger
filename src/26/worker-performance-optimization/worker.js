@@ -1,5 +1,4 @@
-addEventListener('message', (event) => {
-
+addEventListener('message', function aaaaa(event) {
   console.log('typeof event.data:', typeof event.data);
 
   let a = 1;
