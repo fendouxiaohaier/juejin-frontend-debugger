@@ -1,1 +1,0 @@
-{"version":3,"file":"bar.bundle.js","mappings":";;;;;;;;;AAAA;AACA;AACA;AACA;AACA","sources":["webpack://test-webpack/./src/bar.js"],"sourcesContent":["// bar.js\n'use strict';\nexports.bar = function () {\n    return 1;\n}"],"names":[],"sourceRoot":""}

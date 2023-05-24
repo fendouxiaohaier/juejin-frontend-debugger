@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
+// import App from './context/demo1';
+// import App from './context/demo2';
+// import App f4rom './context/demo3';
+// import App from './context/demo4';
+import App from './context/demo5';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -1,1 +1,0 @@
-{"version":3,"file":"foo.bundle.js","mappings":";;;;;;;;;AAAA;AACA;AACA;AACA","sources":["webpack://test-webpack/./src/foo.js"],"sourcesContent":["'use strict';\nexports.foo = function () {\n    return 2;\n}"],"names":[],"sourceRoot":""}

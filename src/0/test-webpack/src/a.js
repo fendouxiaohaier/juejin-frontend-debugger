@@ -1,1 +1,3 @@
-export const aaa = 123;
+const aaa = 123;
+
+console.log(aaa);
