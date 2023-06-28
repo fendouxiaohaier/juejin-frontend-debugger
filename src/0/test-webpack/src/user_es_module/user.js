@@ -1,6 +1,6 @@
 import age2, { showAge } from "./age";
 
-import { showName } from "./name";
+import { showName, showNameAgain } from "./name";
 
 const showUser = () => {
   showAge();

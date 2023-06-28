@@ -7,4 +7,4 @@ const showUser = () => {
 
 showUser();
 
-export { showUser };
+module.exports = { showUser };

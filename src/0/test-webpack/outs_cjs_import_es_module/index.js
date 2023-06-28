@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/user_cjs_import_es_module/age.js":
@@ -8,6 +7,7 @@
   \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
@@ -27,6 +27,26 @@ const showAge2 = () => {
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showAge2);
+
+
+/***/ }),
+
+/***/ "./src/user_cjs_import_es_module/user.js":
+/*!***********************************************!*\
+  !*** ./src/user_cjs_import_es_module/user.js ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const ageDefault = __webpack_require__(/*! ./age */ "./src/user_cjs_import_es_module/age.js");
+
+const showUser = () => {
+  ageDefault();
+  ageDefault.showAge2();
+};
+
+showUser();
+
+module.exports = { showUser };
 
 
 /***/ })
@@ -87,29 +107,12 @@ const showAge2 = () => {
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-(() => {
-/*!***********************************************!*\
-  !*** ./src/user_cjs_import_es_module/user.js ***!
-  \***********************************************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "showUser": () => (/* binding */ showUser)
-/* harmony export */ });
-const ageDefault = __webpack_require__(/*! ./age */ "./src/user_cjs_import_es_module/age.js");
-
-const showUser = () => {
-  ageDefault();
-  ageDefault.showAge2();
-};
-
-showUser();
-
-
-
-})();
-
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/user_cjs_import_es_module/user.js");
+/******/ 	
 /******/ })()
 ;
 //# sourceMappingURL=index.js.map

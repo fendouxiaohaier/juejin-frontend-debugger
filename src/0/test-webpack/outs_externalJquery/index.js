@@ -2,53 +2,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/user_es_module/age.js":
-/*!***********************************!*\
-  !*** ./src/user_es_module/age.js ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ "jquery/src/ajax":
+/*!***********************!*\
+  !*** external "ajax" ***!
+  \***********************/
+/***/ ((module) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "showAge": () => (/* binding */ showAge)
-/* harmony export */ });
-const age = 18;
-
-const showAge = () => {
-  console.log(age);
-};
-
-const age2 = 28;
-
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (age2);
-
+module.exports = ajax;
 
 /***/ }),
 
-/***/ "./src/user_es_module/name.js":
-/*!************************************!*\
-  !*** ./src/user_es_module/name.js ***!
-  \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ "jquery":
+/*!*************************!*\
+  !*** external "jQuery" ***!
+  \*************************/
+/***/ ((module) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "showName": () => (/* binding */ showName)
-/* harmony export */ });
-/* unused harmony export showNameAgain */
-const name = 'lee';
-
-const showName = () => {
-    console.log(name);
-}
-
-const showNameAgain = () => {
-    console.log(name);
-}
-
-
-
+module.exports = jQuery;
 
 /***/ })
 
@@ -79,6 +49,18 @@ const showNameAgain = () => {
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -100,24 +82,18 @@ const showNameAgain = () => {
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!************************************!*\
-  !*** ./src/user_es_module/user.js ***!
-  \************************************/
-/* unused harmony export showUser */
-/* harmony import */ var _age__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./age */ "./src/user_es_module/age.js");
-/* harmony import */ var _name__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./name */ "./src/user_es_module/name.js");
+/*!*************************************!*\
+  !*** ./src/externalJquery/index.js ***!
+  \*************************************/
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var jquery_src_ajax__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery/src/ajax */ "jquery/src/ajax");
+/* harmony import */ var jquery_src_ajax__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery_src_ajax__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
-
-const showUser = () => {
-  (0,_age__WEBPACK_IMPORTED_MODULE_0__.showAge)();
-  (0,_name__WEBPACK_IMPORTED_MODULE_1__.showName)();
-  console.log('age2:', _age__WEBPACK_IMPORTED_MODULE_0__["default"]);
-};
-
-showUser();
-
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(".my-element").animate(/* ... */);
+jquery_src_ajax__WEBPACK_IMPORTED_MODULE_1___default()({});
 
 })();
 
